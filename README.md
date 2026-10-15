@@ -24,6 +24,8 @@ Download the archive for your system from the **[latest release](https://github.
 2. **Start the program:** double-click the `.exe` on Windows or the `.command` file on a Mac.
 3. **First of all, load the Madrix project of your product** in the **Product map** field at the top of the window (click **…**). We send this file together with the product (`.msx`, `.mpx` or Patch `.html`). This turns on every function of the program that you will need.
 
+![Product map field at the top of the window](images/01_product_map.png)
+
 That's it. Below is what each tab does and which ones you will most likely use.
 
 ---
@@ -36,11 +38,17 @@ This tab records effects from other programs that send ArtNet, such as **Madrix*
 - **If you do not have Madrix or a similar program on your computer, you most likely don't need this tab.**
 - If you do have Madrix: the difference from the old program is that you **don't need to type IP addresses**. Play an effect in Madrix and press **Find by ArtNet**. The program listens to the network and finds the IP address that is receiving the ArtNet signal.
 
+![Grab ArtNet tab and the Find by ArtNet button](images/02_grab_artnet.png)
+
 ### Screen grabber: effects from any GIF or video
 This is the tab you will most likely use. It lets you use **any GIF or video** as material for an effect: open the GIF or video on your screen, press **Show overlay**, put the overlay window over the picture and record.
 
+![Screen grabber tab and the Show overlay button](images/03_screen_grabber.png)
+
 ### ArtNet to visual: preview
 Every effect you record (in any tab) appears here. **Record an effect → it appears in ArtNet to visual → check how it will look on the product.**
+
+![ArtNet to visual: recorded effects and the preview](images/04_artnet_to_visual.png)
 
 ### Effect editor: create your own effects
 Think of it as a "Madrix lite": you build effects from layers.
@@ -49,9 +57,15 @@ Think of it as a "Madrix lite": you build effects from layers.
 - **+ Image/GIF** adds a picture or a GIF as a separate layer.
 - **+ Text** adds a separate text layer.
 
+![Effect editor: + Layer, + Image/GIF, + Text and the Mode list](images/05_effect_editor.png)
+
 **GIF modes.** In the lower left corner there is a **GIF modes folder** button. Every GIF you put into this folder becomes a mode: it appears in the **Mode** list of an effects layer. So there are two ways to use a GIF: add it as **+ Image/GIF**, or put it into the GIF modes folder and pick it as a mode.
 
+![GIF modes folder and Record base effects buttons](images/06_gif_modes_and_base.png)
+
 **Record base effects.** Why bother with the GIF modes folder? Say you go to a site like giphy.com, download 300 GIFs and put them into the folder. Then the **Record base effects…** button in the lower right corner records **95 standard effects plus one effect for every GIF**, which is 300 + 95 effects in one go.
+
+![Record base effects dialog with the effect length and the size on the memory card](images/07_record_base_dialog.png)
 
 > ⚠️ **Be careful, this is a lot of data:**
 > - check that it fits on the memory card (the dialog shows the estimated size before recording);
@@ -65,17 +79,25 @@ Here you can put several effects in sequence to music and record it all as **one
 3. If you like, add a **beat effect** (**Flash** or **Dip**) to make the brightness react to the music.
 4. Press **Write the show**. The show is saved as one effect into the slot you choose. **Save project** keeps the show so you can edit it later.
 
+![Show tab: Open music and Add transition](images/08_show.png)
+
 ### Mapping: for developers
 **You most likely won't need this tab.** It is for developers and DIY projects. If you are building your own product, open the inner tab **Draw a map** and draw the LEDs; there are instructions inside. After that you can create a test config and test effects (**Config and test effects**), film the product while they play, and load the video in **Map from video** to get a more detailed map.
+
+![Mapping tab and its inner tabs](images/09_mapping.png)
 
 ---
 
 ## Updates
 **Help → Check for updates…** and enter this address once:
 
+![Help menu, Check for updates](images/10_check_updates.png)
+
 ```
 https://github.com/etereshop-sales/Etereshop-Effects-Recorder/releases/latest/download/version.json
 ```
+
+![Update address in the dialog](images/11_update_dialog.png)
 
 After that the program checks for a new version once a day when it starts, and installs it with one click.
 
