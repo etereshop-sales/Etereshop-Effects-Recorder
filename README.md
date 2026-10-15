@@ -1,0 +1,93 @@
+# Etereshop Effects Recorder
+
+A small program for Etereshop LED products: record, preview and create effects and put them on the controller's memory card.
+
+> **Beta.** The program is still in beta development, so glitches and lags are possible. If something does not work or you have a question, please write to **sales@etereshop.com**.
+
+**Video guide:** https://youtu.be/7uFBYAGUDzY. This is an informal screen recording for now, made so it is easier to see how everything works.
+
+---
+
+## Download
+
+Download the archive for your system from the **[latest release](https://github.com/etereshop-sales/Etereshop-Effects-Recorder/releases/latest)**:
+
+| System | File | How to start |
+|---|---|---|
+| Windows | `Etereshop_Effects_Recorder_Windows.zip` | `Etereshop Effects Recorder.exe` (Java is already inside) |
+| macOS | `Etereshop_Effects_Recorder_Mac.zip` | `Effects Recorder.command`. Install Java first from [adoptium.net](https://adoptium.net); the first time, right-click the file → Open → Open |
+| Any system with Java | `Etereshop_Effects_Recorder_Java.zip` | `java -jar EffectsRecorder.jar` |
+
+## Quick start
+
+1. **Download the archive and unzip it.** This is a portable version: nothing to install, it is ready to use.
+2. **Start the program:** double-click the `.exe` on Windows or the `.command` file on a Mac.
+3. **First of all, load the Madrix project of your product** in the **Product map** field at the top of the window (click **…**). We send this file together with the product (`.msx`, `.mpx` or Patch `.html`). This turns on every function of the program that you will need.
+
+That's it. Below is what each tab does and which ones you will most likely use.
+
+---
+
+## Tabs
+
+### Grab ArtNet: only if you have Madrix (or similar)
+This tab records effects from other programs that send ArtNet, such as **Madrix**, Resolume or Jinx!. It does the same job as our previous recording software.
+
+- **If you do not have Madrix or a similar program on your computer, you most likely don't need this tab.**
+- If you do have Madrix: the difference from the old program is that you **don't need to type IP addresses**. Play an effect in Madrix and press **Find by ArtNet**. The program listens to the network and finds the IP address that is receiving the ArtNet signal.
+
+### Screen grabber: effects from any GIF or video
+This is the tab you will most likely use. It lets you use **any GIF or video** as material for an effect: open the GIF or video on your screen, press **Show overlay**, put the overlay window over the picture and record.
+
+### ArtNet to visual: preview
+Every effect you record (in any tab) appears here. **Record an effect → it appears in ArtNet to visual → check how it will look on the product.**
+
+### Effect editor: create your own effects
+Think of it as a "Madrix lite": you build effects from layers.
+
+- **+ Layer** adds an effects layer. In the right column choose **Mode**: colours, fire, rainbows, rings, plasma, twinkle and more.
+- **+ Image/GIF** adds a picture or a GIF as a separate layer.
+- **+ Text** adds a separate text layer.
+
+**GIF modes.** In the lower left corner there is a **GIF modes folder** button. Every GIF you put into this folder becomes a mode: it appears in the **Mode** list of an effects layer. So there are two ways to use a GIF: add it as **+ Image/GIF**, or put it into the GIF modes folder and pick it as a mode.
+
+**Record base effects.** Why bother with the GIF modes folder? Say you go to a site like giphy.com, download 300 GIFs and put them into the folder. Then the **Record base effects…** button in the lower right corner records **95 standard effects plus one effect for every GIF**, which is 300 + 95 effects in one go.
+
+> ⚠️ **Be careful, this is a lot of data:**
+> - check that it fits on the memory card (the dialog shows the estimated size before recording);
+> - **don't set the length of one effect below 15 seconds.** When effects switch very often, the controller reads the memory card all the time, and the card wears out and dies much faster.
+
+### Show: an effect sequence to music
+Here you can put several effects in sequence to music and record it all as **one effect file**:
+
+1. **Open music…** loads an mp3 or wav. The program finds the beats.
+2. Put the cursor on the timeline and press **+ Add transition**. In the table choose which effect (slot **S#**) starts at that moment and the transition: **Cut** or **Fade**.
+3. If you like, add a **beat effect** (**Flash** or **Dip**) to make the brightness react to the music.
+4. Press **Write the show**. The show is saved as one effect into the slot you choose. **Save project** keeps the show so you can edit it later.
+
+### Mapping: for developers
+**You most likely won't need this tab.** It is for developers and DIY projects. If you are building your own product, open the inner tab **Draw a map** and draw the LEDs; there are instructions inside. After that you can create a test config and test effects (**Config and test effects**), film the product while they play, and load the video in **Map from video** to get a more detailed map.
+
+---
+
+## Updates
+**Help → Check for updates…** and enter this address once:
+
+```
+https://github.com/etereshop-sales/Etereshop-Effects-Recorder/releases/latest/download/version.json
+```
+
+After that the program checks for a new version once a day when it starts, and installs it with one click.
+
+## More documentation
+- [LED effects with the Etereshop Screen Grabber](https://github.com/etereshop-sales/LED-Effects-Programming-using-ETERESHOP-Screen-Grabber)
+- [Programming LED effects with Madrix](https://github.com/etereshop-sales/Programming-Custom-LED-Effects-with-Madrix-A-User-Friendly-Guide)
+- [All about controllers](https://github.com/etereshop-sales/All-about-controllers)
+- [Typical problems and product configuration](https://github.com/etereshop-sales/Typical-problems-and-product-configuration)
+- Detailed manuals in 7 languages are in the `Manuals` folder inside the archive.
+
+---
+
+**Video guide (informal recording):** https://youtu.be/7uFBYAGUDzY
+
+**The program is in beta development: glitches and lags are possible. Questions and bug reports: sales@etereshop.com**
