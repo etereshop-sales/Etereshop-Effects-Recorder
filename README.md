@@ -57,6 +57,8 @@ Think of it as a "Madrix lite": you build effects from layers.
 - **+ Image/GIF** adds a picture or a GIF as a separate layer.
 - **+ Text** adds a separate text layer.
 
+**Animating a picture.** An Image/GIF layer has an **Animation** block: zoom (grow then shrink, shrink then grow, grow from zero), movement in any direction with an optional **Seamless** mode (the picture repeats while it moves), and **Copies** (like Tile count in Madrix: the picture gets smaller and repeats). All of them work together.
+
 ![Effect editor: + Layer, + Image/GIF, + Text and the Mode list](images/05_effect_editor.png)
 
 **GIF modes.** In the lower left corner there is a **GIF modes folder** button. Every GIF you put into this folder becomes a mode: it appears in the **Mode** list of an effects layer. So there are two ways to use a GIF: add it as **+ Image/GIF**, or put it into the GIF modes folder and pick it as a mode.
@@ -81,6 +83,9 @@ Here you can put several effects in sequence to music and record it all as **one
 
 ![Show tab: Open music and Add transition](images/08_show.png)
 
+### Several controllers in one product
+If your Madrix project sends data to several IP addresses (for example a costume and a separate head piece), every effect you record is also saved to a separate folder for each controller, named by IP address and number of universes. Copy each folder to the memory card of its controller. You can rename the folders in **Mapping → Controllers (IP)**.
+
 ### Mapping: for developers
 **You most likely won't need this tab.** It is for developers and DIY projects. If you are building your own product, open the inner tab **Draw a map** and draw the LEDs; there are instructions inside. After that you can create a test config and test effects (**Config and test effects**), film the product while they play, and load the video in **Map from video** to get a more detailed map.
 
@@ -89,7 +94,9 @@ Here you can put several effects in sequence to music and record it all as **one
 ---
 
 ## Updates
-**Help → Check for updates…** and enter this address once:
+From version 4.14 the program checks for a new version on GitHub by itself, once a day when it starts, and installs it with one click. Nothing needs to be set up. **Help → Check for updates…** checks right away.
+
+If you have version 4.13 or older, open **Help → Check for updates…** once and enter this address:
 
 ![Help menu, Check for updates](images/10_check_updates.png)
 
@@ -98,8 +105,6 @@ https://github.com/etereshop-sales/Etereshop-Effects-Recorder/releases/latest/do
 ```
 
 ![Update address in the dialog](images/11_update_dialog.png)
-
-After that the program checks for a new version once a day when it starts, and installs it with one click.
 
 ## More documentation
 - [LED effects with the Etereshop Screen Grabber](https://github.com/etereshop-sales/LED-Effects-Programming-using-ETERESHOP-Screen-Grabber)
