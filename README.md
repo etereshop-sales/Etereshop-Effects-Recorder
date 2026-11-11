@@ -84,12 +84,62 @@ Here you can put several effects in sequence to music and record it all as **one
 ![Show tab: Open music and Add transition](images/08_show.png)
 
 ### Several controllers in one product
-If your Madrix project sends data to several IP addresses (for example a costume and a separate head piece), every effect you record is also saved to a separate folder for each controller, named by IP address and number of universes. Copy each folder to the memory card of its controller. You can rename the folders in **Mapping → Controllers (IP)**.
+If your Madrix project sends data to several IP addresses (for example a costume and a separate head piece), every effect you record is also saved to a separate folder for each controller, named by IP address and number of universes. Copy each folder to the memory card of its controller. Folder names can be changed in developer mode (**Mapping → Controllers (IP)**).
 
-### Mapping: for developers
-**You most likely won't need this tab.** It is for developers and DIY projects. If you are building your own product, open the inner tab **Draw a map** and draw the LEDs; there are instructions inside. After that you can create a test config and test effects (**Config and test effects**), film the product while they play, and load the video in **Map from video** to get a more detailed map.
+### Developer mode
+From version 4.15 the window shows only what customers need. The **Mapping** tab, the log and the service tools are hidden until you switch on **Help → Developer mode** (or press **Ctrl+Shift+D**, on a Mac **Cmd+Shift+D**). Switch it off the same way.
+
+Without developer mode, messages appear in one line at the bottom of the window (red when something is wrong). The full log is always written to a file: **Help → Open log folder** (`recorder.log`); please attach it when you report a problem.
+
+Developer mode adds:
+- **Mapping** tab: if you are building your own product, open the inner tab **Draw a map** and draw the LEDs; there are instructions inside. After that you can create a test config and test effects (**Config and test effects**), film the product while they play, and load the video in **Map from video** to get a more detailed map.
+- **Tools → Check effects…**: what is inside an effect file (frames, length, FPS, universes) and whether it matches `config.txt` and the product map.
+- **Tools → Move effects to another map…**: takes a whole folder of `S#.txt` effects made for one product map and fits them to another (for example after a product got more LEDs). *Fit to shape* works for any product; *by rows* is for products with the same rows but a different number of LEDs in them (masks, spheres). The new map and `config.txt` are saved next to the effects.
+- **Tools → Merge maps…**: puts the maps of several parts (costume, head piece, wings…) on one grid. Each part either has its own controller (its own IP, universes from 1) or is connected to the same controller as the previous part. The result is one Madrix project with ArtNet devices and a `config.txt` for every controller.
+- **Tools → Convert map**: `.mpx` ↔ Patch `.html`.
 
 ![Mapping tab and its inner tabs](images/09_mapping.png)
+
+### Using the program with AI apps (MCP)
+The program can work as an MCP server, so an AI app can open product maps, preview and record effects, check effects, move effects to another map and merge maps for you. Supported: **Claude Desktop**, **OpenCode** and **Hermes Agent**.
+
+In developer mode open **Tools → Connect to AI (MCP)** and tick the app. The program writes itself into that app's settings (other settings are kept, a `.bak` copy is made); untick to remove it. Then restart Claude Desktop or OpenCode; in Hermes type `/reload-mcp`.
+
+If the settings file has comments, the program does not change it and copies the text to paste to the clipboard instead. By hand it looks like this (use your own folder path):
+
+Claude Desktop (`claude_desktop_config.json`):
+```json
+{
+  "mcpServers": {
+    "etereshop-effects-recorder": {
+      "command": "C:\\Etereshop Effects Recorder\\runtime\\bin\\java.exe",
+      "args": ["-jar", "C:\\Etereshop Effects Recorder\\app\\EffectsRecorder.jar", "--mcp"]
+    }
+  }
+}
+```
+
+OpenCode (`~/.config/opencode/opencode.json`):
+```json
+{
+  "mcp": {
+    "etereshop-effects-recorder": {
+      "type": "local",
+      "command": ["java", "-jar", "/path/to/EffectsRecorder.jar", "--mcp"]
+    }
+  }
+}
+```
+
+Hermes Agent (`~/.hermes/config.yaml`):
+```yaml
+mcp_servers:
+  etereshop-effects-recorder:
+    command: "java"
+    args: ["-jar", "/path/to/EffectsRecorder.jar", "--mcp"]
+```
+
+Effects are saved to the same effects folder as in the program.
 
 ---
 
