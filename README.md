@@ -49,6 +49,8 @@ This is the tab you will most likely use. It lets you use **any GIF or video** a
 
 ![Screen grabber tab and the Show overlay button](images/03_screen_grabber.png)
 
+**Effects to music.** For music-reactive visuals, open a free web visualizer such as [vvavy.io](https://vvavy.io/) in the browser, play your track, and record the picture with **Screen grabber**. The memory card plays the effect without sound, so it works best when the product plays it together with the same track.
+
 ### ArtNet to visual: preview
 Every effect you record (in any tab) appears here. **Record an effect → it appears in ArtNet to visual → check how it will look on the product.**
 
