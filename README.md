@@ -196,6 +196,6 @@ https://github.com/etereshop-sales/Etereshop-Effects-Recorder/releases/latest/do
 
 ---
 
-**Video guide (informal recording):** https://youtu.be/fNACkZQ9t3k
+**Video guide:** https://youtu.be/fNACkZQ9t3k
 
 **The program is in beta development: glitches and lags are possible. Questions and bug reports: sales@etereshop.com**
