@@ -26,6 +26,10 @@ Download the archive for your system from the **[latest release](https://github.
 
 ![Product map field at the top of the window](images/01_product_map.png)
 
+At the first start the program opens the **Quick start** window (later: **Help → Quick start…**). Most customers need only its three steps: open the product map, **Record base effects…** (about 95 ready effects for your map) and **Copy to SD card…**.
+
+![Quick start window with three steps](images/15_quick_start.png)
+
 That's it. Below is what each tab does and which ones you will most likely use.
 
 ---
@@ -49,6 +53,8 @@ This is the tab you will most likely use. It lets you use **any GIF or video** a
 Every effect you record (in any tab) appears here. **Record an effect → it appears in ArtNet to visual → check how it will look on the product.**
 
 ![ArtNet to visual: recorded effects and the preview](images/04_artnet_to_visual.png)
+
+Tick **GIF**, **MP4** or **Instagram 9:16** and press **Build selected**. **Instagram 9:16** saves a vertical video 1080×1920 (`_9x16.mp4`) for Instagram Reels or TikTok: the effect on a black background with its name. MP4 and 9:16 need ffmpeg.
 
 ### Effect editor: create your own effects
 Think of it as a "Madrix lite": you build effects from layers.
@@ -105,6 +111,15 @@ Press **Copy to SD card…** at the bottom of the **Effect editor** (or **File �
 
 ![Copy to SD card window](images/13_sd_card.png)
 
+### Memory card manager
+**File → Memory card manager…** (**Ctrl+Shift+M**) or **Card manager…** in the memory card window shows the effects on the card as animated pictures in playback order.
+
+- **Drag** a picture to another place to change the order: moving the 10th effect to the first place is one drag. The orange number is the new position.
+- Select effects and press **Delete** to remove them (press again to bring them back).
+- Nothing changes on the card until you press **Apply**. Then all effects and `config.txt` from the card are saved into a zip in the `SD backups` folder, and the files are renamed `S1`, `S2`, `S3`… in the order shown. `config.txt` on the card is never changed.
+
+![Memory card manager: effects on the card in playback order](images/16_card_manager.png)
+
 ### Map editor
 **Tools → Map editor** (or **Edit…** next to the product map) corrects a ready map without Madrix: select LEDs with a click or a frame, move them with the mouse or the arrow keys, rotate by 90°, mirror. Coloured lines with arrows show the wiring order of every output and where it starts. **Reverse order** and **Start here** renumber a segment or a ring; **Add**, **New output** and **Delete** change the LEDs. **Save and use** writes the map (`.msx` keeps the Madrix project) and `config.txt`.
 
@@ -114,6 +129,8 @@ Moving, rotating and changing the order keep the addresses, so recorded effects 
 
 ### Look and handy extras
 - **View → Theme**: light or dark.
+- **Help → Video guide (YouTube)** opens the video guide.
+- **Help → Report a problem…** puts a description, the program logs, settings and (if you want) the product map into a zip on the Desktop and opens an email to sales@etereshop.com: attach the zip and send.
 - Drag files into the window: a map, `config.txt` (checked against the map), effects, pictures/GIF, OBJ, music, video.
 - Windows: **Help → Open Madrix maps with this program** adds *Open in Etereshop Effects Recorder* to the right-click menu of map files.
 
