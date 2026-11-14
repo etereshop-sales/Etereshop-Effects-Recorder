@@ -4,7 +4,7 @@ A small program for Etereshop LED products: record, preview and create effects a
 
 > **Beta.** The program is still in beta development, so glitches and lags are possible. If something does not work or you have a question, please write to **sales@etereshop.com**.
 
-**Video guide:** https://youtu.be/7uFBYAGUDzY. This is an informal screen recording for now, made so it is easier to see how everything works.
+**Video guide:** https://youtu.be/fNACkZQ9t3k. A narrated walkthrough of version 4.18 (English, with subtitles and chapters).
 
 ---
 
@@ -196,6 +196,6 @@ https://github.com/etereshop-sales/Etereshop-Effects-Recorder/releases/latest/do
 
 ---
 
-**Video guide (informal recording):** https://youtu.be/7uFBYAGUDzY
+**Video guide (informal recording):** https://youtu.be/fNACkZQ9t3k
 
 **The program is in beta development: glitches and lags are possible. Questions and bug reports: sales@etereshop.com**
