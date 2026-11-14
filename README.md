@@ -22,7 +22,7 @@ Download the archive for your system from the **[latest release](https://github.
 
 1. **Download the archive and unzip it.** This is a portable version: nothing to install, it is ready to use.
 2. **Start the program:** double-click the `.exe` on Windows or the `.command` file on a Mac.
-3. **First of all, load the Madrix project of your product** in the **Product map** field at the top of the window (click **…**). We send this file together with the product (`.msx`, `.mpx` or Patch `.html`). This turns on every function of the program that you will need.
+3. **First of all, load the Madrix project of your product** in the **Product map** field at the top of the window (click **…**), or simply drag the file into the window. We send this file together with the product (`.msx`, `.msz`, `.mpx` or Patch `.html`). This turns on every function of the program that you will need. The program remembers the map; recently used maps are in **File → Recent maps**.
 
 ![Product map field at the top of the window](images/01_product_map.png)
 
@@ -73,6 +73,10 @@ Think of it as a "Madrix lite": you build effects from layers.
 > - check that it fits on the memory card (the dialog shows the estimated size before recording);
 > - **don't set the length of one effect below 15 seconds.** When effects switch very often, the controller reads the memory card all the time, and the card wears out and dies much faster.
 
+**Easier settings (4.18).** Everything that has a range (speed, density, size, opacity, angles…) has a slider with a number field next to it. The layer position and size are called **Position X / Y** and **Layer width / height**. An effect starts playing as soon as you open it; **Space** pauses and resumes (also in **ArtNet to visual**). **↶ / ↷** or **Ctrl+Z / Ctrl+Y** undo and redo.
+
+**Countdown and 3D look.** A Text layer can be a **Countdown** (from / to, minutes:seconds, a template like `New Year in {n}`, final text). Pictures and text can **rotate like a coin** and get **thickness** from copies behind them; pictures can **bounce off the edges**.
+
 ### Show: an effect sequence to music
 Here you can put several effects in sequence to music and record it all as **one effect file**:
 
@@ -83,8 +87,35 @@ Here you can put several effects in sequence to music and record it all as **one
 
 ![Show tab: Open music and Add transition](images/08_show.png)
 
+### 3D: cubes and other volume products
+The **3D** tab appears when the product map has depth, for example an LED cube. Build an effect from 3D layers: plane, sphere, wave, rain, fire, clouds, sparkles, spiral, cube frame, a 3D object from an **OBJ** file (Blender and others, also a numbered series as animation), a picture or GIF as a rotating object, 3D text and countdown. The 3D view on the right can be rotated with the mouse. **● Record effect** writes the effect file for the memory card, the same way as the Effect editor.
+
+![3D tab with layers, the 3D view and layer settings](images/14_3d.png)
+
 ### Several controllers in one product
 If your Madrix project sends data to several IP addresses (for example a costume and a separate head piece), every effect you record is also saved to a separate folder for each controller, named by IP address and number of universes. Copy each folder to the memory card of its controller. Folder names can be changed in developer mode (**Mapping → Controllers (IP)**).
+
+### Copy effects to the memory card
+Press **Copy to SD card…** at the bottom of the **Effect editor** (or **File → Write to SD card…**, **Ctrl+Shift+S**). Insert the controller's card: a disk up to 32 GB is chosen as the card automatically. The program checks the effects against `config.txt` and the map and copies them to the card.
+
+- **`config.txt` on the card is never changed.** It is added only if the card has none.
+- `log.txt` is created if it is missing.
+- With **Back up old effects and config.txt…** ticked (default), the old effects and `config.txt` from the card are saved into a zip in the `SD backups` folder next to your effects before anything is copied.
+- Effects with the same numbers are replaced; the other effects on the card stay.
+
+![Copy to SD card window](images/13_sd_card.png)
+
+### Map editor
+**Tools → Map editor** (or **Edit…** next to the product map) corrects a ready map without Madrix: select LEDs with a click or a frame, move them with the mouse or the arrow keys, rotate by 90°, mirror. Coloured lines with arrows show the wiring order of every output and where it starts. **Reverse order** and **Start here** renumber a segment or a ring; **Add**, **New output** and **Delete** change the LEDs. **Save and use** writes the map (`.msx` keeps the Madrix project) and `config.txt`.
+
+Moving, rotating and changing the order keep the addresses, so recorded effects still fit. After adding or deleting LEDs, record the effects of the changed outputs again.
+
+![Map editor: wiring order with arrows, a selected segment](images/12_map_editor.png)
+
+### Look and handy extras
+- **View → Theme**: light or dark.
+- Drag files into the window: a map, `config.txt` (checked against the map), effects, pictures/GIF, OBJ, music, video.
+- Windows: **Help → Open Madrix maps with this program** adds *Open in Etereshop Effects Recorder* to the right-click menu of map files.
 
 ### Developer mode
 From version 4.15 the window shows only what customers need. The **Mapping** tab, the log and the service tools are hidden until you switch on **Help → Developer mode** (or press **Ctrl+Shift+D**, on a Mac **Cmd+Shift+D**). Switch it off the same way.
