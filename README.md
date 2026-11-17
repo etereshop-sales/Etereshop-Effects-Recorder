@@ -85,10 +85,8 @@ Think of it as a "Madrix lite": you build effects from layers.
 
 **Countdown and 3D look.** A Text layer can be a **Countdown** (from / to, minutes:seconds, a template like `New Year in {n}`, final text). Pictures and text can **rotate like a coin** and get **thickness** from copies behind them; pictures can **bounce off the edges**.
 
-<details>
-<summary><b>Tutorial: effects from a picture or logo</b> — movement, direction, tiles, zoom, a rainbow logo, a 3D coin (click to open)</summary>
-
-<br>
+### Tutorial: effects from a picture or logo
+Movement, direction, tiles, zoom, a rainbow logo and a 3D coin — step by step.
 
 In the examples the product is an LED tail with 2700 LEDs (map 116 × 57) and the picture is a round logo, white on black. The previews below are what the product shows.
 
@@ -155,8 +153,6 @@ In **3D look** choose **Rotate like a coin: around vertical axis**, set **Rotati
 
 #### 7. Record and put on the card
 Press **● Record effect** — the effect is saved with the next free number (S#) in the effects folder. Check it in **ArtNet to visual** and copy it with **Copy to SD card…**. Effects shorter than about 15 seconds wear out the memory card faster: set **Duration** to 20 s or more.
-
-</details>
 
 
 ### Show: an effect sequence to music
