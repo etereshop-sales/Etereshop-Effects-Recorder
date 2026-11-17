@@ -85,6 +85,80 @@ Think of it as a "Madrix lite": you build effects from layers.
 
 **Countdown and 3D look.** A Text layer can be a **Countdown** (from / to, minutes:seconds, a template like `New Year in {n}`, final text). Pictures and text can **rotate like a coin** and get **thickness** from copies behind them; pictures can **bounce off the edges**.
 
+<details>
+<summary><b>Tutorial: effects from a picture or logo</b> — movement, direction, tiles, zoom, a rainbow logo, a 3D coin (click to open)</summary>
+
+<br>
+
+In the examples the product is an LED tail with 2700 LEDs (map 116 × 57) and the picture is a round logo, white on black. The previews below are what the product shows.
+
+**Which picture works best:** a white (or bright) logo on a black or transparent background. Black means "LED off", so everything black stays dark on the product. PNG, JPG and GIF (also animated) are supported.
+
+#### 1. Put the picture on the product
+1. Load the product map at the top of the window and open the **Effect editor** tab.
+2. Click an empty slot in the **Effects library** (left, bottom).
+3. Press **+ Image/GIF** and choose the file.
+4. **Size:** *Fit* — the whole picture is visible; *Fill* — fills the layer, edges are cut; *Stretch* — stretched to the layer. **Whole canvas** makes the layer as big as the product.
+5. You can also drag the dashed frame in the preview to move the layer and the corner square to resize it.
+
+![Picture layer in the Effect editor](images/tutorial/ed_t1_logo_0.png)
+
+![Logo on the tail](images/tutorial/t1_logo.gif)
+
+#### 2. Make it move: direction and speed
+In **Animation → Movement** press an arrow (or set **Direction, °**: 0 = right, 90 = down, 180 = left, 270 = up, any angle in between works) and set **Speed, cells/s**. **■** stops the movement.
+- **Seamless** — the picture repeats without a gap, like an endless ribbon.
+- **Bounce off the edges** — the picture bounces inside the layer like a ball.
+
+![Movement settings](images/tutorial/ed_t2_moving_0.png)
+
+![Logo moving to the right, seamless](images/tutorial/t2_moving.gif)
+
+#### 3. Tiles: many copies of the picture
+**Copies (tile count)** — how many copies along each side: 2 gives 2 × 2 = 4 logos, 4 gives 16. Copies work together with movement and zoom. In the example: 2 copies moving up-right (315°).
+
+![Copies (tile count)](images/tutorial/ed_t3_tiles_0.png)
+
+![Four logos moving diagonally](images/tutorial/t3_tiles.gif)
+
+#### 4. Zoom: the picture grows and shrinks
+**Zoom:** *Grow, then shrink*, *Shrink, then grow* or *Grow from zero*. **Smallest / Largest size, %** set the range, **Cycle, s** — how long one cycle takes.
+
+![Zoom settings](images/tutorial/ed_t4_zoom_0.png)
+
+![Logo pulsing](images/tutorial/t4_zoom.gif)
+
+#### 5. A rainbow logo: a plasma layer with Multiply
+A white logo can take the colours of any effect:
+1. Make the logo layer as above (in the example it also moves to the right).
+2. Press **+ Layer** and choose **Mode: Plasma**, **Palette: Rainbow** (or Fire, Ice, Neon…). Press **Whole canvas**.
+3. The plasma layer must be **above** the logo in the **Layers** list (top layer first; use ▲ / ▼).
+4. Set **Blend: Multiply** on the plasma layer.
+
+Multiply multiplies the colours: where the logo is white, you see the plasma colours; where it is black, it stays black. So only the logo is coloured, and the colours keep moving.
+
+![Plasma layer with Blend: Multiply above the logo](images/tutorial/ed_t5_rainbow_0.png)
+
+![Rainbow logo](images/tutorial/t5_rainbow.gif)
+
+Other blend modes worth trying on the top layer:
+- **Colorize** — the colour comes from the top layer, the brightness from the picture below (soft logo edges stay soft).
+- **Mask** — the layers below are visible only where the top layer is bright (for example, a fire seen through the shape of a white logo: put the logo on top with Mask and Fire below).
+- **Add (glow)** — the top layer is added as light on top of the picture.
+
+#### 6. A 3D coin
+In **3D look** choose **Rotate like a coin: around vertical axis**, set **Rotation, °/s** and **Thickness, copies** for volume. In the example a **Rainbow** layer with **Multiply** is on top, so the coin changes colour while it turns.
+
+![3D look settings](images/tutorial/ed_t6_coin_1.png)
+
+![Rotating rainbow coin](images/tutorial/t6_coin.gif)
+
+#### 7. Record and put on the card
+Press **● Record effect** — the effect is saved with the next free number (S#) in the effects folder. Check it in **ArtNet to visual** and copy it with **Copy to SD card…**. Effects shorter than about 15 seconds wear out the memory card faster: set **Duration** to 20 s or more.
+
+</details>
+
+
 ### Show: an effect sequence to music
 Here you can put several effects in sequence to music and record it all as **one effect file**:
 
