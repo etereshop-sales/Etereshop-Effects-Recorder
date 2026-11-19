@@ -15,8 +15,45 @@ Download the archive for your system from the **[latest release](https://github.
 | System | File | How to start |
 |---|---|---|
 | Windows | `Etereshop_Effects_Recorder_Windows.zip` | `Etereshop Effects Recorder.exe` (Java is already inside) |
-| macOS | `Etereshop_Effects_Recorder_Mac.zip` | `Effects Recorder.command`. Install Java first from [adoptium.net](https://adoptium.net); the first time, right-click the file → Open → Open |
+| macOS | `Etereshop_Effects_Recorder_Mac.zip` | `Effects Recorder.command`. Install Java first from [adoptium.net](https://adoptium.net); the first time, right-click the file → Open → Open. If macOS says it "cannot be verified", see [macOS: cannot be verified](#macos-cannot-be-verified) below |
 | Any system with Java | `Etereshop_Effects_Recorder_Java.zip` | `java -jar EffectsRecorder.jar` |
+
+<a id="macos-cannot-be-verified"></a>
+
+<details>
+<summary><b>macOS: "cannot be verified" / "Move to Trash"</b></summary>
+
+The program is not signed by Apple, so macOS (especially 15 Sequoia and newer) may refuse to open it with the message *"Apple could not verify … is free of malware"*. Right-click → Open no longer helps there. Do this instead:
+
+1. In that message click **Done**, not **Move to Trash**. If the file is already in the Trash, open the Trash, right-click it → **Put Back**, or unzip the archive again.
+2. Open **Terminal**: press ⌘ + Space, type `Terminal`, press Enter.
+3. Paste these lines one by one, each followed by Enter:
+
+   ```
+   xattr -dr com.apple.quarantine ~/Downloads
+   rm -rf ~/Library/Caches/JNA
+   sudo xattr -dr com.apple.quarantine /Library/Java/JavaVirtualMachines
+   ```
+
+   The last line asks for your Mac password. The characters are not shown while you type; type it and press Enter.
+   If you unzipped the program somewhere other than Downloads, type `xattr -dr com.apple.quarantine ` (with a space at the end) and drag the program folder from Finder into the Terminal window instead of `~/Downloads`.
+4. Start the program from Terminal: type `cd ` (with a space), drag the folder that contains `EffectsRecorder.jar` into the window, press Enter, then run:
+
+   ```
+   java -jar EffectsRecorder.jar
+   ```
+
+What Terminal may answer:
+
+| Message | What to do |
+|---|---|
+| `command not found: java` or an offer to install Java | Install Temurin from [adoptium.net](https://adoptium.net) (the `.pkg` file; on Apple M1–M4 choose **aarch64**), then repeat step 4 |
+| `Unable to access jarfile` | Terminal is in the wrong folder: type `ls` and check that `EffectsRecorder.jar` is in the list; repeat step 4 |
+| The warning appears again | Right after it, open **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to the blocked file, then start again. Note the file name in the warning (for example `java` or `libjnidispatch.jnilib`) and tell us if it does not help |
+
+**Screen grabber** also needs permission to record the screen: **System Settings → Privacy & Security → Screen Recording**, switch on Terminal (or Java).
+
+</details>
 
 ## Quick start
 
